@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav{
+    background-image: url(f.jpg);
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+    line-height: 75px;
+    padding: 0px 70px;
+    box-shadow: #fff;
+
+}
+
+ ul{
+float:right;
+
+}
+ ul li {
+    display: inline-block;
+    list-style: none;
+}
+ul li a {
+    text-decoration: none;
+    padding: 0px 30px ;
+    color:black;
+    transition: 0.6s ease;
+    text-decoration: none;
+    text-align: center;
+}
+ul li a:hover{
+     background-color: #fff;
+     color:#2b88a4;
+    }
+   .container{
+   display:inline-flex;
+    justify-content: center;
+    align-items: center;  
+    margin-top: 60px;
+    margin-left: 10px;
+   }
+button{
+    background: black;
+    color:#fff;
+    border: none;
+    font-weight: bold;
+    outline:none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-left: 700px;
+    margin-top: 20px;
+    
+}
+h1{
+    margin-top: 20px;
+    text-align:center;
+
+}
+p{
+    text-align: center;
+    margin-left: 40px;
+}
+h2{
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+img{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+body{
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    position: relative;
+    width: 100%;
+ 
+}
+.images{
+    display: flex;
+    width: 100%;
+}
+.images img{
+    height: 350px;
+    width:50%;
+    transition: all 0.15s ease ;
+}
+.images input{
+    display: none;
+}
+.dots{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.dots label{
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    border:solid #121010 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+.dots label:hover{background: #c5bbd2;}
+#i1:checked ~ .m1{
+    margin-left: 0%;
+}
+#i2:checked ~ .m2{
+    margin-left: -100%;
+}
+#i3:checked ~ .m3{
+    margin-left: -200%;
+}
+#i4:checked ~ .m4{
+    margin-left: -300%;
+}
+
+
+
+@media screen and (max-width:600px){}

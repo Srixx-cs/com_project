@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Reset</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  h2 {
+    text-align: center;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  .otp-input {
+    display: flex;
+    justify-content: space-between;
+  }
+  .otp-input input {
+    width: calc(100% / 6 - 10px);
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .otp-input input:last-child {
+    margin-right: 0;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Password Reset</h2>
+    <div class="form-group">
+      <label for="emailOrPhone">Enter Email or Phone Number</label>
+      <input type="text" id="emailOrPhone" name="emailOrPhone" required>
+    </div>
+    <div class="form-group" id="otpForm" style="display:none;">
+      <label for="otp">Enter OTP</label>
+      <div class="otp-input">
+        <input type="text" id="otp1" name="otp1" maxlength="1" pattern="[0-9]" required>
+        <input type="text" id="otp2" name="otp2" maxlength="1" pattern="[0-9]" required>
+        <input type="text" id="otp3" name="otp3" maxlength="1" pattern="[0-9]" required>
+        <input type="text" id="otp4" name="otp4" maxlength="1" pattern="[0-9]" required>
+        <input type="text" id="otp5" name="otp5" maxlength="1" pattern="[0-9]" required>
+        <input type="text" id="otp6" name="otp6" maxlength="1" pattern="[0-9]" required>
+      </div>
+    </div>
+    <button id="sendOTPBtn">Send OTP</button>
+   <a href="btn.html"><button id="confirmOTPBtn" style="display:none;">Confirm OTP</button></a>
+  </div>
+
+  <script>
+    document.getElementById('sendOTPBtn').addEventListener('click', function() {
+      // Code to send OTP to the provided email or phone number
+      // For demonstration purpose, let's just toggle the display of the OTP input fields
+      document.getElementById('otpForm').style.display = 'block';
+      document.getElementById('sendOTPBtn').style.display = 'none';
+      document.getElementById('confirmOTPBtn').style.display = 'block';
+    });
+
+    document.getElementById('confirmOTPBtn').addEventListener('click', function() {
+      // Code to confirm the entered OTP
+      // For demonstration purpose, let's just display an alert
+      alert('OTP confirmed. Password reset successful!');
+    });
+  </script>
+</body>
+</html>
